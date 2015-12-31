@@ -1,0 +1,20 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1347\cocoasubrtf570
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh19500\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 iCrash Implementation Project:\
+\
+1. Launching the servers (Redundancy req.)\
+	- Run \'93LaunchServer.java\'94 as a Java Application - run both the LaunchServer and the Backup instances\
+\
+2. Launching the \'93TestCase_db_alerts_location\'94 will require the database to be clear \
+ (I have tried to modify the code to delete rows from the database before populating them again with the new data, but I ran into many errors and due to the lack of time, I decided to leave the code as it is. A simple trick to dump and recreate the database takes less time and it works better.)\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs20 \cf0 \cb1 \CocoaLigature0 sudo ./mysqldump --user=root --password=\'85\'85\'85\'85 -A > ~/Desktop/db1.sql\
+sudo /usr/local/mysql/bin/mysql -u root -p < icrash_db_create.sql\
+\
+}

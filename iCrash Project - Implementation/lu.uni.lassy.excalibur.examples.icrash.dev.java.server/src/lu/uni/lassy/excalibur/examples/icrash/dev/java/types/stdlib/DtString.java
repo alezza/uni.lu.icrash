@@ -1,0 +1,36 @@
+/*******************************************************************************
+ * Copyright (c) 2014 University of Luxembourg.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Alfredo Capozucca - initial API and implementation
+ ******************************************************************************/
+package lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib;
+
+import java.io.Serializable;
+
+
+public class DtString implements Serializable {
+
+		private static final long serialVersionUID = 227L;
+
+		public PtString value;
+		
+		
+		public DtString(PtString s){
+			value = s;
+		}
+
+
+		public PtBoolean eq(DtString s){
+			boolean res = s.value.getValue().equals(this.value.getValue());
+		
+			if(res)
+				return new PtBoolean(true);
+			else
+				return new PtBoolean(false);
+		}
+}
